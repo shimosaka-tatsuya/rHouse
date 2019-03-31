@@ -1,0 +1,189 @@
+<%
+/* 相対パスを取得 */
+var setLayered = ("../").repeat(filename.slice(filename.indexOf("_src")).split("/").length - 1)+"_src/_template/";
+
+/* ページID */
+var pageId = "news";
+
+/* cssのファイル名（拡張子は不要。複数ある場合は、『,』で区切って記入） */
+var cssFileName = ["news"];
+%>
+<!DOCTYPE html>
+<html lang="ja">
+<% // ヘッド %>
+<%- include(setLayered + "base/head", { pageId: pageId, cssFileName: cssFileName }) %>
+<body class="<%= pageId %>">
+
+<% // ヘッダー %>
+<%- include(setLayered + "base/header") %>
+
+<div class="box-content-<%= pageId %>">
+
+<% // 大見出し %>
+<%- include(setLayered + "ttl/ttl-pageHead") %>
+
+<% // 小見出し %>
+<%- include(setLayered + "ttl/ttl-contentHead", {
+	txtContentHeadEn: "News",
+	txtContentHeadJp: "お知らせ",
+	type: "h2"
+}) %>
+
+<nav class="box-columnNavigation">
+	<ul class="list-columnNavigation">
+		
+		<li class="item-columnNavigation txt-fontAlphabet">
+			<a class="btn-columnNavigation" href="#">Event</a>
+		</li>
+		
+		<li class="item-columnNavigation txt-fontAlphabet">
+			<a class="btn-columnNavigation" href="#">Information</a>
+		</li>
+		
+		<li class="item-columnNavigation txt-fontAlphabet">
+			<a class="btn-columnNavigation" href="#">Real estate</a>
+		</li>
+		
+	</ul><!-- /.list-columnNavigation -->
+</nav>
+
+<ul class="list-column">
+	
+	<li class="item-column">
+		<a class="box-columnLink" href="#">
+			<div class="tmb-column">
+				<img src="../img/news/tmbNewsList.jpg" alt="サムネイル" width="100%" height="">
+			</div>
+			<div class="box-columnSpec interactionScroll interactionScrollActive">
+				<p class="txt-columnCategory txt-fontAlphabet">Event</p>
+				<h3 class="ttl-column">記事の見出し。ダミーです。</h3>
+			</div> 
+		</a><!-- /.box-columnLink -->
+	</li>
+	
+	<li class="item-column">
+		<a class="box-columnLink" href="#">
+			<div class="tmb-column">
+				<img src="../img/news/tmbNewsList.jpg" alt="サムネイル" width="100%" height="">
+			</div>
+			<div class="box-columnSpec interactionScroll interactionScrollActive">
+				<p class="txt-columnCategory txt-fontAlphabet">Event</p>
+				<h3 class="ttl-column">記事の見出し。ダミーです。</h3>
+			</div> 
+		</a><!-- /.box-columnLink -->
+	</li>
+	
+	<li class="item-column">
+		<a class="box-columnLink" href="#">
+			<div class="tmb-column">
+				<img src="../img/news/tmbNewsList.jpg" alt="サムネイル" width="100%" height="">
+			</div>
+			<div class="box-columnSpec interactionScroll">
+				<p class="txt-columnCategory txt-fontAlphabet">Event</p>
+				<h3 class="ttl-column">記事の見出し。ダミーです。</h3>
+			</div> 
+		</a><!-- /.box-columnLink -->
+	</li>
+	
+	<li class="item-column">
+		<a class="box-columnLink" href="#">
+			<div class="tmb-column">
+				<img src="../img/news/tmbNewsList.jpg" alt="サムネイル" width="100%" height="">
+			</div>
+			<div class="box-columnSpec interactionScroll">
+				<p class="txt-columnCategory txt-fontAlphabet">Event</p>
+				<h3 class="ttl-column">記事の見出し。ダミーです。</h3>
+			</div> 
+		</a><!-- /.box-columnLink -->
+	</li>
+	
+	<li class="item-column">
+		<a class="box-columnLink" href="#">
+			<div class="tmb-column">
+				<img src="../img/news/tmbNewsList.jpg" alt="サムネイル" width="100%" height="">
+			</div>
+			<div class="box-columnSpec interactionScroll">
+				<p class="txt-columnCategory txt-fontAlphabet">Event</p>
+				<h3 class="ttl-column">記事の見出し。ダミーです。</h3>
+			</div> 
+		</a><!-- /.box-columnLink -->
+	</li>
+	
+	<li class="item-column">
+		<a class="box-columnLink" href="#">
+			<div class="tmb-column">
+				<img src="../img/news/tmbNewsList.jpg" alt="サムネイル" width="100%" height="">
+			</div>
+			<div class="box-columnSpec interactionScroll">
+				<p class="txt-columnCategory txt-fontAlphabet">Event</p>
+				<h3 class="ttl-column">記事の見出し。ダミーです。</h3>
+			</div> 
+		</a><!-- /.box-columnLink -->
+	</li>
+	
+	<li class="item-column">
+		<a class="box-columnLink" href="#">
+			<div class="tmb-column">
+				<img src="../img/news/tmbNewsList.jpg" alt="サムネイル" width="100%" height="">
+			</div>
+			<div class="box-columnSpec interactionScroll">
+				<p class="txt-columnCategory txt-fontAlphabet">Event</p>
+				<h3 class="ttl-column">記事の見出し。ダミーです。</h3>
+			</div> 
+		</a><!-- /.box-columnLink -->
+	</li>
+	
+	<li class="item-column">
+		<a class="box-columnLink" href="#">
+			<div class="tmb-column">
+				<img src="../img/news/tmbNewsList.jpg" alt="サムネイル" width="100%" height="">
+			</div>
+			<div class="box-columnSpec interactionScroll">
+				<p class="txt-columnCategory txt-fontAlphabet">Event</p>
+				<h3 class="ttl-column">記事の見出し。ダミーです。</h3>
+			</div> 
+		</a><!-- /.box-columnLink -->
+	</li>
+	
+	<li class="item-column">
+		<a class="box-columnLink" href="#">
+			<div class="tmb-column">
+				<img src="../img/news/tmbNewsList.jpg" alt="サムネイル" width="100%" height="">
+			</div>
+			<div class="box-columnSpec interactionScroll">
+				<p class="txt-columnCategory txt-fontAlphabet">Event</p>
+				<h3 class="ttl-column">記事の見出し。ダミーです。</h3>
+			</div> 
+		</a><!-- /.box-columnLink -->
+	</li>
+	
+	<li class="item-column">
+		<a class="box-columnLink" href="#">
+			<div class="tmb-column">
+				<img src="../img/news/tmbNewsList.jpg" alt="サムネイル" width="100%" height="">
+			</div>
+			<div class="box-columnSpec interactionScroll">
+				<p class="txt-columnCategory txt-fontAlphabet">Event</p>
+				<h3 class="ttl-column">記事の見出し。ダミーです。</h3>
+			</div> 
+		</a><!-- /.box-columnLink -->
+	</li>
+	
+</ul>
+
+<%- include(setLayered + "pagination/pagination") %>
+
+<% // 施工事例 %>
+<%- include(setLayered + "box-addToWorks/box-addToWorks") %>
+
+<% // お問い合わせ %>
+<%- include(setLayered + "box-addToContact/box-addToContact") %>
+
+</div><!-- /.box-content-<%= pageId %> -->
+
+<% // フッター %>
+<%- include(setLayered + "base/footer") %>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</body>
+</html>

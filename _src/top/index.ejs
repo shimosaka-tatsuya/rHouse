@@ -17,7 +17,7 @@ var cssFileName = ["top"];
 <% // ヘッダー %>
 <%- include(setLayered + "base/header") %>
 
-<div class="box-content-pageId">
+<div class="box-content-<%= pageId %>">
 
 <% //メインビジュアル %>
 <div class="box-mainVisual">
@@ -28,7 +28,11 @@ var cssFileName = ["top"];
 <% //お知らせ %>
 <div class="box-news">
 
-<%- include(setLayered + "ttl/ttl-contentHead") %>
+<%- include(setLayered + "ttl/ttl-contentHead", {
+	txtContentHeadEn: "News",
+	txtContentHeadJp: "お知らせ",
+	type: "h1"
+}) %>
 
 <ul class="list-news">
 	<li class="item-news">
@@ -135,13 +139,13 @@ var cssFileName = ["top"];
 	</dl><!-- /.data-separateContent -->
 </a><!-- /.box-separateContent -->
 
-</div><!-- /.box-content-<%= pageId %> -->
-
 <% // 施工事例 %>
 <%- include(setLayered + "box-addToWorks/box-addToWorks") %>
 
 <% // お問い合わせ %>
 <%- include(setLayered + "box-addToContact/box-addToContact") %>
+
+</div><!-- /.box-content-<%= pageId %> -->
 
 <% // フッター %>
 <%- include(setLayered + "base/footer") %>

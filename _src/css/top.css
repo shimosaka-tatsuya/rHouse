@@ -3,6 +3,16 @@
 @import "./../_template/box-addToWorks/box-addToWorks";
 @import "./../_template/box-addToContact/box-addToContact";
 
+.box-content-top {
+  min-width: 1200px
+}
+
+@media screen and (max-width:812px) {
+  .box-content-top {
+    min-width: unset
+  }
+}
+
 /* PC view */
 /* メインビジュアル */
 .box-mainVisual {

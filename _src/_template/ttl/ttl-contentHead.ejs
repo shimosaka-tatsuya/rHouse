@@ -1,4 +1,8 @@
-<h1 class="ttl-contentHead">
-	<span class="txt-contentHeadEn txt-fontAlphabet">News</span>
-	<span class="txt-contentHeadJp">お知らせ</span>
-</h1><!-- /.ttl-contentHead -->
+<% if (typeof txtContentHeadEn === 'undefined') { var txtContentHeadEn = ''; } %>
+<% if (typeof txtContentHeadJp === 'undefined') { var txtContentHeadJp = ''; } %>
+<% if (typeof type === 'undefined') { var type = 'h1'; } %>
+
+<<%= type %> class="ttl-contentHead">
+	<span class="txt-contentHeadEn txt-fontAlphabet"><%= txtContentHeadEn %></span>
+	<span class="txt-contentHeadJp"><%= txtContentHeadJp %></span>
+</<%= type %>><!-- /.ttl-contentHead -->
