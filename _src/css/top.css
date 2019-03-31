@@ -1,0 +1,224 @@
+@import "./../_template/ttl/ttl-contentHead";
+@import "./../_template/btn/btn-transition";
+@import "./../_template/box-addToWorks/box-addToWorks";
+@import "./../_template/box-addToContact/box-addToContact";
+
+/* PC view */
+/* メインビジュアル */
+.box-mainVisual {
+  width: 100%;
+  margin-bottom: 50px
+}
+
+.img-mainVisual--sp {
+  display: none
+}
+
+/* お知らせ一覧 */
+.box-news {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 980px;
+  margin: 0 auto 100px
+}
+
+.list-news {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between
+}
+
+.item-news {
+  width: calc(20% - 24px);
+  margin-left: 30px
+}
+
+.item-news:first-child {
+  margin-left: 0
+}
+
+.box-linkNews {
+  display: block;
+  line-height: 1;
+  text-decoration: none;
+  transition-property: opacity;
+  transition-duration: .3s;
+  transition-timing-function: ease
+}
+
+.box-linkNews:link, .box-linkNews:visited {
+  color: #1a1a1a
+}
+
+.box-linkNews:hover {
+  opacity: .8
+}
+
+.tmb-news {
+  margin-bottom: 14px
+}
+
+.txt-newsDate {
+  margin-bottom: 10px;
+  font-size: 12px
+}
+
+.ttl-news {
+  font-weight: 100;
+  line-height: 1.5
+}
+
+/* 思い / 家づくりについて */
+.box-separateContent {
+  display: flex;
+  width: 100%;
+  min-width: 980px;
+  margin: 0 auto;
+  align-items: center;
+  background: url(../img/top/bgSeparate.jpg) 100% 0 no-repeat;
+  background-size: 50%;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition-property: opacity;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+  font-size: 0
+}
+
+.box-separateContent:nth-child(2n) {
+  flex-flow: row-reverse;
+  background: url(../img/top/bgSeparate.jpg) 0 0 no-repeat;
+  background-size: 50%
+}
+
+.box-separateContent:hover {
+  opacity: .8
+}
+
+.tmb-separateContent {
+  width: 50%
+}
+
+.img-separateContent--sp {
+  display: none
+}
+
+.data-separateContent {
+  width: 50%;
+  padding: 0 105px;
+  box-sizing: border-box
+}
+
+.ttl-separateContent {
+  text-align: center;
+  font-size: 22px;
+  line-height: 1;
+  margin-bottom: 26px
+}
+
+.txt-separateContent {
+  font-size: 14px;
+  line-height: 2.1;
+  text-align: justify
+}
+
+.btn-separateContent {
+  display: block;
+  text-align: center;
+  line-height: 1;
+  margin-top: 22px
+}
+
+.btn-separateContent:after {
+  content: ">>";
+  display: inline-block;
+  margin-left: 16px
+}
+
+/* SP view */
+@media screen and (max-width:812px) {
+
+/* メインビジュアル */
+.box-mainVisual {
+	margin-bottom: 36px
+}
+.img-mainVisual {
+	display: none
+}
+.img-mainVisual--sp {
+	display: block
+}
+
+.box-news {
+	margin-bottom: 60px
+}
+.box-news, .list-news {
+	max-width: unset;
+	min-width: unset
+}
+.list-news {
+	margin-top: 30px;
+	flex-flow: column
+}
+.item-news {
+	width: 100%;
+	margin: 16px 0 0
+}
+.item-news:first-child {
+	margin-top: 0
+}
+.box-linkNews {
+	display: flex;
+	justify-content: space-between;
+	align-items: center
+}
+.tmb-news {
+	margin-bottom: 0;
+	width: 140px;
+	padding: 0 16px;
+	box-sizing: border-box
+}
+.box-newsSpec {
+	width: calc(100% - 120px);
+	box-sizing: border-box
+}
+.ttl-news {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis
+}
+
+/* 思い / 家づくりについて */
+.box-separateContent {
+    min-width: unset
+  }
+  .box-separateContent, .box-separateContent:nth-child(2n) {
+    flex-flow: column;
+    background: url(../img/top/bgSeparateSp.jpg) bottom no-repeat;
+    background-size: 120%
+  }
+  .tmb-separateContent {
+    width: 100%
+  }
+  .img-separateContent {
+    display: none
+  }
+  .img-separateContent--sp {
+    display: block
+  }
+  .data-separateContent {
+    width: 100%;
+    padding: 30px 20px 50px
+  }
+  .ttl-separateContent {
+    text-align: center;
+    font-size: 17px;
+    line-height: 1
+  }
+  .btn-separateContent {
+    margin-top: 18px
+  }
+
+}

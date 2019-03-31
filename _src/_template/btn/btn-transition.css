@@ -1,0 +1,47 @@
+/* PC view */
+.wp-transition {
+  display: flex;
+  justify-content: flex-end;
+  margin: 55px auto 0;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 980px
+}
+
+.btn-transition {
+  display: inline-block;
+  padding: 0 42px;
+  line-height: 50px;
+  color: #0d935a;
+  border: 1px solid #0d935a;
+  border-radius: 2px;
+  letter-spacing: .35em;
+  text-decoration: none;
+  transition-property: opacity;
+  transition-duration: .3s;
+  transition-timing-function: ease
+}
+
+.btn-transition:after {
+  content: ">>";
+  display: inline-block;
+  margin-left: 18px
+}
+
+.btn-transition:hover {
+  opacity: .8
+}
+
+/* SP view */
+@media screen and (max-width:812px) {
+.wp-transition {
+    justify-content: center;
+    margin-top: 30px;
+    max-width: unset;
+    min-width: unset
+  }
+  .btn-transition {
+    padding: 0 30px;
+    line-height: 40px
+  }
+}

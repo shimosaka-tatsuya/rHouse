@@ -3,16 +3,16 @@
 var setLayered = ("../").repeat(filename.slice(filename.indexOf("_src")).split("/").length - 1)+"_src/_template/";
 
 /* ページID */
-var pageId = "sample";
+var pageId = "top";
 
 /* cssのファイル名（拡張子は不要。複数ある場合は、『,』で区切って記入） */
-var cssFileName = ["sample"];
+var cssFileName = ["top"];
 %>
 <!DOCTYPE html>
 <html lang="ja">
 <% // ヘッド %>
 <%- include(setLayered + "base/head", { pageId: pageId, cssFileName: cssFileName }) %>
-<body class="pageId">
+<body class="<%= pageId %>">
 
 <% // ヘッダー %>
 <%- include(setLayered + "base/header") %>
@@ -28,10 +28,7 @@ var cssFileName = ["sample"];
 <% //お知らせ %>
 <div class="box-news">
 
-<h1 class="ttl-contentHead">
-	<span class="txt-contentHeadEn txt-fontAlphabet">News</span>
-	<span class="txt-contentHeadJp">お知らせ</span>
-</h1><!-- /.ttl-contentHead -->
+<%- include(setLayered + "ttl/ttl-contentHead") %>
 
 <ul class="list-news">
 	<li class="item-news">
@@ -96,7 +93,9 @@ var cssFileName = ["sample"];
 </ul><!-- /.list-news -->
 
 <% // ボタン %>
-<%- include(setLayered + "btn/btn-transition") %>
+<%- include(setLayered + "btn/btn-transition", {
+		txtTransition: "Read More"
+}) %>
 
 </div><!-- /.box-news -->
 
@@ -136,7 +135,13 @@ var cssFileName = ["sample"];
 	</dl><!-- /.data-separateContent -->
 </a><!-- /.box-separateContent -->
 
-</div><!-- /.box-content-pageId -->
+</div><!-- /.box-content-<%= pageId %> -->
+
+<% // 施工事例 %>
+<%- include(setLayered + "box-addToWorks/box-addToWorks") %>
+
+<% // お問い合わせ %>
+<%- include(setLayered + "box-addToContact/box-addToContact") %>
 
 <% // フッター %>
 <%- include(setLayered + "base/footer") %>
