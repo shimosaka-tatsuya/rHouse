@@ -20,7 +20,11 @@ var cssFileName = ["news"];
 <div class="box-content-<%= pageId %>">
 
 <% // 大見出し %>
-<%- include(setLayered + "ttl/ttl-pageHead") %>
+<%- include(setLayered + "ttl/ttl-pageHead", {
+	txtPageHeadEn: "News",
+	txtPageHeadJp: "お知らせ",
+	txtPageHeadCaption: "石川県加賀市の工務店、ロイヤルハウス加賀店by株式会社北出木材工業の最新情報などを配信していきます。"
+}) %>
 
 <% // 小見出し %>
 <%- include(setLayered + "ttl/ttl-contentHead", {
