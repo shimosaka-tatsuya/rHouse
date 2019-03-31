@@ -1,0 +1,132 @@
+<%
+/* 相対パスを取得 */
+var setLayered = ("../").repeat(filename.slice(filename.indexOf("_src")).split("/").length - 1)+"template/";
+
+/* ページID */
+var pageId = "sample";
+
+/* cssのファイル名（拡張子は不要。複数ある場合は、『,』で区切って記入） */
+var cssFileName = ["sample"];
+%>
+<!DOCTYPE html>
+<html lang="ja">
+<!-- ヘッド（titleやdiscriptionやogなど） -->
+<%- include(setLayered + "base/head", { pageId: pageId, cssFileName: cssFileName }) %>
+<body class="pageId">
+
+<!-- ヘッダー -->
+<%- include(setLayered + "base/header") %>
+
+<!-- トップ／メインビジュアル -->
+<div class="box-mainVisual">
+	<div class="box-mainVisualInr">
+		<img src="https://ginzamag.com/wp-content/uploads/2018/09/e65e02afd7415a7a3d4127dfba6e0145.jpg" alt="" width="100%" height="">
+		<p class="txt-mainVisualCategory">product</p>
+		<div class="ttl-mainVisual">サンプルのキャプション1</div>
+		<p class="txt-mainVisualDate">2018.10.10</p>
+	</div><!-- /.box-mainVisualInr -->
+	
+	<div class="box-mainVisualInr">
+		<img src="https://ginzamag.com/wp-content/uploads/2018/09/9277ac0a164146ab6435ef4a295d0a41.jpg" alt="" width="100%" height="">
+		<p class="txt-mainVisualCategory">news</p>
+		<div class="ttl-mainVisual">サンプルのキャプション2</div>
+		<p class="txt-mainVisualDate">2018.10.9</p>
+	</div>
+	
+	<div class="box-mainVisualInr">
+		<img src="https://ginzamag.com/wp-content/uploads/2018/09/9277ac0a164146ab6435ef4a295d0a41.jpg" alt="" width="100%" height="">
+		<p class="txt-mainVisualCategory">culture</p>
+		<div class="ttl-mainVisual">サンプルのキャプション3</div>
+		<p class="txt-mainVisualDate">2018.10.8</p>
+	</div>
+</div><!-- /.box-mainVisual -->
+
+<!-- トップ／アバウト -->
+<div class="box-about">
+	<dl class="data-about">
+		<dt class="ttl-About">About</dt>
+		<dd class="txt-about txt-about-english">I will input the ABOUT from here.I will input the ABOUT from here.I will input the ABOUT from here.</dd>
+		<dd class="txt-about txt-about-japanese">テキスト入りますテキスト入りますテキスト入りますテキスト入ります</dd>
+	</dl><!-- /.data-about -->
+	
+	<%- include(setLayered + "btn-detail/btn-detail") %>
+</div><!-- /.box-About -->
+
+<!-- トップ／小見出し -->
+<p class="ttl-sectionHead">column</p>
+
+<!-- コラム一覧 -->
+<ul class="list-column">
+<%- include(setLayered + "list-column/box-column/box-column", {
+	loopNum: 6
+}) %>
+</ul><!-- /.list-column -->
+
+<!-- フッター -->
+<%- include(setLayered + "base/footer") %>
+
+<!-- 各ページ／見出し -->
+<%- include(setLayered + "ttl-pageHead/ttl-pageHead", {
+	ttlPageHead: "コラム一覧"
+}) %>
+
+<!-- コラム一覧／ページネーション -->
+<%- include(setLayered + "list-column/nav-pagenation/nav-pagenation") %>
+
+<!-- コラム詳細／見出し・メタ情報 -->
+<%- include(setLayered + "column-detail/box-columnHead/box-columnHead", {
+	ttlColumnEnglish: "title from here",
+	ttlColumnJapanese: "タイトル入ります",
+	txtColumnDate: "2018.01.01",
+	txtColumnCategory: "プロダクト"
+}) %>
+
+<!-- コラム詳細／タグ -->
+<%- include(setLayered + "column-detail/list-tag/list-tag", {
+	listTag: [
+		{
+			txtListTag: 'インタビュー',
+			linkListTag: 'tag-interview'	
+		},
+		{
+			txtListTag: 'デザイン',
+			linkListTag: 'tag-design'	
+		},
+		{
+			txtListTag: '九谷焼',
+			linkListTag: 'tag-kutaniyaki'	
+		},
+		{
+			txtListTag: '作法',
+			linkListTag: 'tag-sahou'	
+		},
+		{
+			txtListTag: '歴史',
+			linkListTag: 'tag-rekishi'	
+		}
+	]
+}) %>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/common/js/jquery.bxslider.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.box-mainVisual').bxSlider({
+	    mode: "horizontal",
+	    auto: true,
+	    speed: "500",
+	    pause: "3000",
+	    infiniteLoop: true,
+	    captions: false,
+	    responsive: true,
+	    touchEnabled: true,
+	    pager: true,
+	    controls: true,
+	    nextText: "次へ",
+	    prevText: "前へ",
+	    easing: "ease"
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<%
+/* 相対パスを取得 */
+var setLayered = ("../").repeat(filename.slice(filename.indexOf("_src")).split("/").length - 1)+"template/";
+
+/* ページID */
+var pageId = "about";
+
+/* cssのファイル名（拡張子は不要。複数ある場合は、『,』で区切って記入） */
+var cssFileName = ["about"];
+%>
+<!DOCTYPE html>
+<html lang="ja">
+<%/* ヘッド（titleやdiscriptionやogなど） */ %>
+<%- include(setLayered + "base/head", { pageId: pageId, cssFileName: cssFileName }) %>
+<body class="area-<%- pageId %>">
+
+<%/* ヘッダー */ %>
+<%- include(setLayered + "base/header") %>
+
+<div class="box-content-<%- pageId  %>">
+
+<%/* 各ページ／見出し */ %>
+<%- include(setLayered + "ttl-pageHead/ttl-pageHead", {
+	ttlPageHead: "About",
+	htmlTag: "h1"
+}) %>
+
+	<div class="box-description">
+		<h2 class="ttl-description txt-fontAlphabet">What is “q”</h2>
+	
+		<p class="txt-About txt-fontAlphabet">I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
+			I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
+			I will input the CONCEPT from here.I will input the CONCEPT from here.</p>
+			
+		<p class="txt-About">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。<br>
+			テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。<br>
+			テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</p>
+	</div><!-- /.box-description -->
+		
+	<div class="box-description">
+		<h2 class="ttl-description txt-fontAlphabet">What is “KUTANI”</h2>
+	
+		<p class="txt-About txt-fontAlphabet">I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
+			I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
+			I will input the CONCEPT from here.I will input the CONCEPT from here.</p><!-- /.txt-About--English -->
+			
+		<p class="txt-About">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。<br>
+			テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。<br>
+			テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</p><!-- /.txt-About--Japanese -->
+	</div><!-- /.box-description -->
+
+	<div class="box-writer">
+		<h2 class="ttl-description txt-fontAlphabet">What is “KUTANI”</h2>
+		
+		<div class="box-writerInfo">
+			<p class="txt-About txt-fontAlphabet">I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
+				I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
+				I will input the CONCEPT from here.I will input the CONCEPT from here.</p><!-- /.txt-About--English -->
+				
+			<p class="txt-About">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。<br>
+				テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。<br>
+				テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</p><!-- /.txt-About--Japanese -->
+		</div><!-- /.box-writerInfo -->
+		
+		<div class="img-writer">
+			<img src="https://placehold.jp/240x100.png" alt="" width="100%" height="">
+		</div>
+	</div><!-- /.box-writer -->
+
+</div><!-- /.box-content-<%- pageId  %> -->
+
+<!-- フッター -->
+<%- include(setLayered + "base/footer") %>
+</body>
+</html>
