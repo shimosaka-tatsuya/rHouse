@@ -7,12 +7,12 @@
 @import "./../_template/box-columnNavigation/box-columnNavigation";
 @import "./../_template/pagination/pagination";
 
-.box-content-news {
+.box-content-works {
   min-width: 1200px
 }
 
 @media screen and (max-width:812px) {
-  .box-content-news {
+  .box-content-works {
     min-width: unset
   }
 }

@@ -3,10 +3,10 @@
 var setLayered = ("../").repeat(filename.slice(filename.indexOf("_src")).split("/").length - 1)+"_src/_template/";
 
 /* ページID */
-var pageId = "news";
+var pageId = "works";
 
 /* cssのファイル名（拡張子は不要。複数ある場合は、『,』で区切って記入） */
-var cssFileName = ["news"];
+var cssFileName = ["works"];
 %>
 <!DOCTYPE html>
 <html lang="ja">
@@ -21,33 +21,40 @@ var cssFileName = ["news"];
 
 <% // 大見出し %>
 <%- include(setLayered + "ttl/ttl-pageHead", {
-	txtPageHeadEn: "News",
-	txtPageHeadJp: "お知らせ",
-	txtPageHeadCaption: "石川県加賀市の工務店、ロイヤルハウス加賀店by株式会社北出木材工業の最新情報などを配信していきます。"
+	txtPageHeadEn: "Works",
+	txtPageHeadJp: "施工事例",
+	txtPageHeadCaption: "石川県加賀市の工務店、ロイヤルハウス加賀店by株式会社北出木材工業の施工事例をご紹介します。"
 }) %>
 
 <% // 小見出し %>
 <%- include(setLayered + "ttl/ttl-contentHead", {
-	txtContentHeadEn: "News",
-	txtContentHeadJp: "お知らせ",
+	txtContentHeadEn: "Works",
+	txtContentHeadJp: "施工事例",
 	type: "h2"
 }) %>
 
 <%- include(setLayered + "box-columnNavigation/box-columnNavigation", {
 	dataColumnNavigation: [
 		{
-			txtColumnNavigation: 'Event'
+			txtColumnNavigation: 'Model'
 		},
 		{
-			txtColumnNavigation: 'Information'
+			txtColumnNavigation: 'New build'
 		},
 		{
-			txtColumnNavigation: 'Real estate'
+			txtColumnNavigation: 'Renovation'
+		},
+		{
+			txtColumnNavigation: 'Reform'
+		},
+		{
+			txtColumnNavigation: 'Shop'
 		}
 	]
 }) %>
 
 <%- include(setLayered + "list-column/list-column") %>
+
 
 <%- include(setLayered + "pagination/pagination") %>
 
