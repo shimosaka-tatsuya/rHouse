@@ -24,19 +24,6 @@
     background-size: cover;
 }
 
-/* ローカルナビ */
-/* SP view */
-@media screen and (max-width:812px) {
-  .list-columnNavigation {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .item-columnNavigation {
-	  margin: 0 30px 15px 0;
-	}
-}
-
 /* 記事本文 */
 /* PC view */
 .box-columnDetail {
