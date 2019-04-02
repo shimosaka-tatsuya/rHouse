@@ -3,10 +3,10 @@
 var setLayered = ("../").repeat(filename.slice(filename.indexOf("_src")).split("/").length - 1)+"_src/_template/";
 
 /* ページID */
-var pageId = "news-detail";
+var pageId = "works-detail";
 
 /* cssのファイル名（拡張子は不要。複数ある場合は、『,』で区切って記入） */
-var cssFileName = ["news-detail"];
+var cssFileName = ["works-detail"];
 %>
 <!DOCTYPE html>
 <html lang="ja">
@@ -21,29 +21,82 @@ var cssFileName = ["news-detail"];
 
 <% // 大見出し %>
 <%- include(setLayered + "ttl/ttl-pageHead", {
-	txtPageHeadEn: "News",
-	txtPageHeadJp: "お知らせ",
-	txtPageHeadCaption: "石川県加賀市の工務店、ロイヤルハウス加賀店by株式会社北出木材工業の最新情報などを配信していきます。"
+	txtPageHeadEn: "Works",
+	txtPageHeadJp: "施工事例",
+	txtPageHeadCaption: "石川県加賀市の工務店、ロイヤルハウス加賀店by株式会社北出木材工業の施工事例をご紹介します。"
 }) %>
 
 <div class="box-columnDetail">
-	<h2 class="ttl-columnDetail">記事の見出しです。</h2>
-	<p class="txt-columnCategory">カテゴリー</p>
+<%- include(setLayered + "ttl/ttl-contentHead", {
+	txtContentHeadEn: "Works",
+	txtContentHeadJp: "施工事例",
+	type: "h2"
+}) %>
+	
+<% // ローカルナビ %>
+<%- include(setLayered + "box-columnNavigation/box-columnNavigation", {
+	dataColumnNavigation: [
+		{
+			txtColumnNavigation: 'Model'
+		},
+		{
+			txtColumnNavigation: 'New build'
+		},
+		{
+			txtColumnNavigation: 'Renovation'
+		},
+		{
+			txtColumnNavigation: 'Reform'
+		},
+		{
+			txtColumnNavigation: 'Shop'
+		}
+	]
+}) %>
 	
 	<div class="box-columnDetailMain">
-		<img src="../img/news/tmbColumnDetail.jpg" alt="記事タイトル サムネイル" width="100%" height="">
-	
-		<p>ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。</p>
-		
-		<p>ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。</p>
-		
-		<p>ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。</p>
 		
 		<img src="../img/news/tmbColumnDetail.jpg" alt="記事タイトル サムネイル" width="100%" height="">
 	
 		<p>ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。</p>
 		
-		<p>ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。</p>
+		
+		<div class="box-worksSpec">
+			<h3 class="ttl-worksSpecMain">「ピロティの家」</h3>
+			
+			<dl class="data-worksSpec">
+				<dt class="ttl-worksSpec">所在地</dt>
+				<dd class="txt-worksSpec">八頭郡八頭町
+				
+				<dt class="ttl-worksSpec">竣工</dt>
+				<dd class="txt-worksSpec">2017年9月</dd>
+				
+				<dt class="ttl-worksSpec">構造</dt>
+				<dd class="txt-worksSpec">木造2階建</dd>
+				
+				<dt class="ttl-worksSpec">家族構成</dt>
+				<dd class="txt-worksSpec">夫婦</dd>
+				
+				<dt class="ttl-worksSpec">延床面積</dt>
+				<dd class="txt-worksSpec">92.00㎡</dd>
+				
+				<dt class="ttl-worksSpec">敷地面積</dt>
+				<dd class="txt-worksSpec">498.37㎡</dd>
+				
+				<dt class="ttl-worksSpec">主な仕様</dt>
+				<dd class="txt-worksSpec">OMソーラー</dd>
+				
+				<dt class="ttl-worksSpec">屋根</dt>
+				<dd class="txt-worksSpec">ガルバリウム鋼板</dd>
+				
+				<dt class="ttl-worksSpec">外壁</dt>
+				<dd class="txt-worksSpec">そとん壁塗り＋板貼り</dd>
+				
+				<dt class="ttl-worksSpec">内装</dt>
+				<dd class="txt-worksSpec">薩摩中霧島壁塗り</dd>
+			</dl><!-- /.data-worksSpec -->
+		</div><!-- /.box-worksSpec -->
+
 	</div><!-- /.box-columnDetailMain -->
 	
 <% // ページネーション %>
