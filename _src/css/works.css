@@ -1,0 +1,24 @@
+@import "./../_template/ttl/ttl-contentHead";
+@import "./../_template/btn/btn-transition";
+@import "./../_template/box-addToWorks/box-addToWorks";
+@import "./../_template/box-addToContact/box-addToContact";
+@import "./../_template/ttl/ttl-pageHead";
+@import "./../_template/list-column/list-column";
+@import "./../_template/box-columnNavigation/box-columnNavigation";
+@import "./../_template/pagination/pagination";
+
+/* メインビジュアル */
+.box-pageHead {
+	background: url(../img/works/bgMainVisual.jpg) top no-repeat;
+    background-size: cover;
+}
+
+.box-content-works {
+  min-width: 1200px
+}
+
+@media screen and (max-width:812px) {
+  .box-content-works {
+    min-width: unset
+  }
+}

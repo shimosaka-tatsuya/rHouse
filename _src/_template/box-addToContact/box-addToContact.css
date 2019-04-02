@@ -1,0 +1,47 @@
+/* PC view */
+.box-addToContact {
+  background-color: #f0f0f0;
+  padding: 60px 0
+}
+
+.box-addToContactInner {
+  width: 100%;
+  max-width: 1000px;
+  min-width: 980px;
+  margin: 50px auto 0;
+  font-size: 14px
+}
+
+.txt-addToContactMain {
+  line-height: 1.5
+}
+
+.data-addToContact {
+  margin-top: 28px;
+  line-height: 1.5
+}
+
+.txt-addToContact {
+  text-indent: -1em;
+  margin-left: 1em
+}
+
+.box-addToContact .wp-transition {
+  justify-content: center
+}
+
+/* SP view */
+@media screen and (max-width:812px) {
+  .box-addToContact {
+    padding: 38px 20px 72px;
+    box-sizing: border-box
+  }
+  .box-addToContactInner {
+    max-width: unset;
+    min-width: unset;
+    margin: 40px auto 0
+  }
+  .box-addToContact .wp-transition {
+    margin-top: 35px!important
+  }
+}

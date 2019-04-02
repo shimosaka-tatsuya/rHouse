@@ -1,0 +1,46 @@
+/* PC view */
+.box-addToWorks {
+  padding: 60px 0;
+  background: url(../img/common/bgWorks.png) top repeat
+}
+
+.list-addToWorks {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 980px;
+  margin: 40px auto 0;
+  display: flex
+}
+
+.item-addToWorks {
+  width: calc(20% - 30px);
+  margin-left: 38px
+}
+
+.item-addToWorks:first-child {
+  margin-left: 0
+}
+
+/* SP view */
+@media screen and (max-width:812px) {
+  .box-addToWorks {
+    padding: 35px 0 72px;
+    background: url(../img/common/bgWorksSp.png) top repeat
+  }
+  .list-addToWorks {
+    max-width: unset;
+    min-width: unset;
+    margin-top: 35px;
+    display: flex;
+    flex-flow: column;
+    padding: 0 20px;
+    box-sizing: border-box
+  }
+  .item-addToWorks {
+    width: 100%;
+    margin: 0 auto 15px
+  }
+  .wp-transition {
+    margin-top: 20px!important
+  }
+}

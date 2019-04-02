@@ -1,0 +1,67 @@
+<%
+/* 相対パスを取得 */
+var setLayered = ("../").repeat(filename.slice(filename.indexOf("_src")).split("/").length - 1)+"_src/_template/";
+
+/* ページID */
+var pageId = "news-detail";
+
+/* cssのファイル名（拡張子は不要。複数ある場合は、『,』で区切って記入） */
+var cssFileName = ["news-detail"];
+%>
+<!DOCTYPE html>
+<html lang="ja">
+<% // ヘッド %>
+<%- include(setLayered + "base/head", { pageId: pageId, cssFileName: cssFileName }) %>
+<body class="<%= pageId %>">
+
+<% // ヘッダー %>
+<%- include(setLayered + "base/header") %>
+
+<div class="box-content-<%= pageId %>">
+
+<% // 大見出し %>
+<%- include(setLayered + "ttl/ttl-pageHead", {
+	txtPageHeadEn: "News",
+	txtPageHeadJp: "お知らせ",
+	txtPageHeadCaption: "石川県加賀市の工務店、ロイヤルハウス加賀店by株式会社北出木材工業の最新情報などを配信していきます。"
+}) %>
+
+<div class="box-columnDetail">
+	<h2 class="ttl-columnDetail">記事の見出しです。</h2>
+	<p class="txt-columnCategory">カテゴリー</p>
+	
+	<div class="box-columnDetailMain">
+		<img src="../img/news/tmbColumnDetail.jpg" alt="記事タイトル サムネイル" width="100%" height="">
+	
+		<p>ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。</p>
+		
+		<p>ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。</p>
+		
+		<p>ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。</p>
+		
+		<img src="../img/news/tmbColumnDetail.jpg" alt="記事タイトル サムネイル" width="100%" height="">
+	
+		<p>ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。</p>
+		
+		<p>ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。</p>
+	</div><!-- /.box-columnDetailMain -->
+	
+<% // ページネーション %>
+<%- include(setLayered + "pagination/columnPageNation") %>	
+
+</div><!-- /.box-columnDetail -->
+
+<% // 施工事例 %>
+<%- include(setLayered + "box-addToWorks/box-addToWorks") %>
+
+<% // お問い合わせ %>
+<%- include(setLayered + "box-addToContact/box-addToContact") %>
+
+</div><!-- /.box-content-<%= pageId %> -->
+
+<% // フッター %>
+<%- include(setLayered + "base/footer") %>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</body>
+</html>

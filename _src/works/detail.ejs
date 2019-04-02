@@ -1,0 +1,149 @@
+<%
+/* 相対パスを取得 */
+const setLayered = ("../").repeat(filename.slice(filename.indexOf("_src")).split("/").length - 1)+"_src/_template/";
+
+/* ページID */
+const pageId = "works-detail";
+
+/* cssのファイル名（拡張子は不要。複数ある場合は、『,』で区切って記入） */
+const cssFileName = ["works-detail"];
+%>
+<!DOCTYPE html>
+<html lang="ja">
+<% // ヘッド %>
+<%- include(setLayered + "base/head", { pageId: pageId, cssFileName: cssFileName }) %>
+<body class="<%= pageId %>">
+
+<% // ヘッダー %>
+<%- include(setLayered + "base/header") %>
+
+<div class="box-content-<%= pageId %>">
+
+<% // 大見出し %>
+<%- include(setLayered + "ttl/ttl-pageHead", {
+	txtPageHeadEn: "Works",
+	txtPageHeadJp: "施工事例",
+	txtPageHeadCaption: "石川県加賀市の工務店、ロイヤルハウス加賀店by株式会社北出木材工業の施工事例をご紹介します。"
+}) %>
+
+<div class="box-columnDetail">
+<%- include(setLayered + "ttl/ttl-contentHead", {
+	txtContentHeadEn: "Works",
+	txtContentHeadJp: "施工事例",
+	type: "h2"
+}) %>
+	
+<% // ローカルナビ %>
+<%- include(setLayered + "box-columnNavigation/box-columnNavigation", {
+	dataColumnNavigation: [
+		{
+			txtColumnNavigation: 'Model'
+		},
+		{
+			txtColumnNavigation: 'New build'
+		},
+		{
+			txtColumnNavigation: 'Renovation'
+		},
+		{
+			txtColumnNavigation: 'Reform'
+		},
+		{
+			txtColumnNavigation: 'Shop'
+		}
+	]
+}) %>
+	
+	<div class="box-columnDetailMain">
+
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="../img/news/tmbColumnDetail.jpg" alt="記事タイトル サムネイル" width="100%" height=""></div>
+				<div class="swiper-slide"><img src="../img/news/tmbColumnDetail.jpg" alt="記事タイトル サムネイル" width="100%" height=""></div>
+				<div class="swiper-slide"><img src="../img/news/tmbColumnDetail.jpg" alt="記事タイトル サムネイル" width="100%" height=""></div>
+				<div class="swiper-slide"><img src="../img/news/tmbColumnDetail.jpg" alt="記事タイトル サムネイル" width="100%" height=""></div>
+				<div class="swiper-slide"><img src="../img/news/tmbColumnDetail.jpg" alt="記事タイトル サムネイル" width="100%" height=""></div>
+				<div class="swiper-slide"><img src="../img/news/tmbColumnDetail.jpg" alt="記事タイトル サムネイル" width="100%" height=""></div>
+			</div>
+			
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+	
+		<p>ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。</p>
+		
+		
+		<div class="box-worksSpec">
+			<h3 class="ttl-worksSpecMain">「ピロティの家」</h3>
+			
+			<dl class="data-worksSpec">
+				<dt class="ttl-worksSpec">所在地</dt>
+				<dd class="txt-worksSpec">八頭郡八頭町
+				
+				<dt class="ttl-worksSpec">竣工</dt>
+				<dd class="txt-worksSpec">2017年9月</dd>
+				
+				<dt class="ttl-worksSpec">構造</dt>
+				<dd class="txt-worksSpec">木造2階建</dd>
+				
+				<dt class="ttl-worksSpec">家族構成</dt>
+				<dd class="txt-worksSpec">夫婦</dd>
+				
+				<dt class="ttl-worksSpec">延床面積</dt>
+				<dd class="txt-worksSpec">92.00㎡</dd>
+				
+				<dt class="ttl-worksSpec">敷地面積</dt>
+				<dd class="txt-worksSpec">498.37㎡</dd>
+				
+				<dt class="ttl-worksSpec">主な仕様</dt>
+				<dd class="txt-worksSpec">OMソーラー</dd>
+				
+				<dt class="ttl-worksSpec">屋根</dt>
+				<dd class="txt-worksSpec">ガルバリウム鋼板</dd>
+				
+				<dt class="ttl-worksSpec">外壁</dt>
+				<dd class="txt-worksSpec">そとん壁塗り＋板貼り</dd>
+				
+				<dt class="ttl-worksSpec">内装</dt>
+				<dd class="txt-worksSpec">薩摩中霧島壁塗り</dd>
+			</dl><!-- /.data-worksSpec -->
+		</div><!-- /.box-worksSpec -->
+
+	</div><!-- /.box-columnDetailMain -->
+	
+<% // ページネーション %>
+<%- include(setLayered + "pagination/columnPageNation") %>	
+
+</div><!-- /.box-columnDetail -->
+
+<% // 施工事例 %>
+<%- include(setLayered + "box-addToWorks/box-addToWorks") %>
+
+<% // お問い合わせ %>
+<%- include(setLayered + "box-addToContact/box-addToContact") %>
+
+</div><!-- /.box-content-<%= pageId %> -->
+
+<% // フッター %>
+<%- include(setLayered + "base/footer") %>
+
+<script src="/js/lib/swiper.min.js"></script>
+<script>
+const mySwiper = new Swiper ('.swiper-container', {
+    // オプションパラメータ(一部のみ抜粋)
+    loop: true, // 最後のスライドまで到達した場合、最初に戻らずに続けてスライド可能にするか。
+    speed: 600, // スライドが切り替わるトランジション時間(ミリ秒)。
+    slidesPerView: 1, // 何枚のスライドを表示するか
+    spaceBetween: 10, // スライド間の余白サイズ(ピクセル)
+    direction: 'horizontal', // スライド方向。 'horizontal'(水平) か 'vertical'(垂直)。effectオプションが 'slide' 以外は無効。
+    effect: 'slide', // "slide", "fade"(フェード), "cube"(キューブ回転), "coverflow"(カバーフロー) または "flip"(平面回転)
+ 
+    // 前後スライドへのナビゲーションを表示する場合
+    navigation: {
+      nextEl: '.swiper-button-next', // 次のスライドボタンのセレクタ
+      prevEl: '.swiper-button-prev', // 前のスライドボタンのセレクタ
+    }
+  });
+</script>
+</body>
+</html>

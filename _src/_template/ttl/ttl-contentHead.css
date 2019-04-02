@@ -1,0 +1,30 @@
+/* PC view */
+.ttl-contentHead {
+  text-align: center;
+  color: #1a1a1a
+}
+
+.txt-contentHeadEn {
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  display: block;
+  font-weight: 100
+}
+
+.txt-contentHeadJp {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 100;
+  letter-spacing: .08em
+}
+
+/* SP view */
+@media screen and (max-width:812px) {
+  .txt-contentHeadEn {
+    font-size: 30px
+  }
+  .txt-contentHeadJp {
+    font-size: 13px
+  }
+}

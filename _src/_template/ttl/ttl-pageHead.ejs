@@ -1,0 +1,11 @@
+<% if (typeof txtPageHeadEn === 'undefined') { var txtPageHeadEn = ''; } %>
+<% if (typeof txtPageHeadJp === 'undefined') { var txtPageHeadJp = ''; } %>
+<% if (typeof txtPageHeadCaption === 'undefined') { var txtPageHeadCaption = ''; } %>
+<div class="box-pageHead">
+	<h1 class="ttl-pageHead">
+		<span class="txt-pageHeadEn txt-fontAlphabet"><%= txtPageHeadEn %></span>
+		<span class="txt-pageHeadJp"><%= txtPageHeadJp %></span>
+	</h1><!-- /.ttl-pageHead -->
+	
+	<p class="txt-pageHeadCaption"><%= txtPageHeadCaption %></p>
+</div><!-- /.box-pageHead -->
