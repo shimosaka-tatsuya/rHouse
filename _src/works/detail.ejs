@@ -1,12 +1,12 @@
 <%
 /* 相対パスを取得 */
-var setLayered = ("../").repeat(filename.slice(filename.indexOf("_src")).split("/").length - 1)+"_src/_template/";
+const setLayered = ("../").repeat(filename.slice(filename.indexOf("_src")).split("/").length - 1)+"_src/_template/";
 
 /* ページID */
-var pageId = "works-detail";
+const pageId = "works-detail";
 
 /* cssのファイル名（拡張子は不要。複数ある場合は、『,』で区切って記入） */
-var cssFileName = ["works-detail"];
+const cssFileName = ["works-detail"];
 %>
 <!DOCTYPE html>
 <html lang="ja">
@@ -55,8 +55,20 @@ var cssFileName = ["works-detail"];
 }) %>
 	
 	<div class="box-columnDetailMain">
-		
-		<img src="../img/news/tmbColumnDetail.jpg" alt="記事タイトル サムネイル" width="100%" height="">
+
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="../img/news/tmbColumnDetail.jpg" alt="記事タイトル サムネイル" width="100%" height=""></div>
+				<div class="swiper-slide"><img src="../img/news/tmbColumnDetail.jpg" alt="記事タイトル サムネイル" width="100%" height=""></div>
+				<div class="swiper-slide"><img src="../img/news/tmbColumnDetail.jpg" alt="記事タイトル サムネイル" width="100%" height=""></div>
+				<div class="swiper-slide"><img src="../img/news/tmbColumnDetail.jpg" alt="記事タイトル サムネイル" width="100%" height=""></div>
+				<div class="swiper-slide"><img src="../img/news/tmbColumnDetail.jpg" alt="記事タイトル サムネイル" width="100%" height=""></div>
+				<div class="swiper-slide"><img src="../img/news/tmbColumnDetail.jpg" alt="記事タイトル サムネイル" width="100%" height=""></div>
+			</div>
+			
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
 	
 		<p>ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。</p>
 		
@@ -115,6 +127,23 @@ var cssFileName = ["works-detail"];
 <% // フッター %>
 <%- include(setLayered + "base/footer") %>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/js/lib/swiper.min.js"></script>
+<script>
+const mySwiper = new Swiper ('.swiper-container', {
+    // オプションパラメータ(一部のみ抜粋)
+    loop: true, // 最後のスライドまで到達した場合、最初に戻らずに続けてスライド可能にするか。
+    speed: 600, // スライドが切り替わるトランジション時間(ミリ秒)。
+    slidesPerView: 1, // 何枚のスライドを表示するか
+    spaceBetween: 10, // スライド間の余白サイズ(ピクセル)
+    direction: 'horizontal', // スライド方向。 'horizontal'(水平) か 'vertical'(垂直)。effectオプションが 'slide' 以外は無効。
+    effect: 'slide', // "slide", "fade"(フェード), "cube"(キューブ回転), "coverflow"(カバーフロー) または "flip"(平面回転)
+ 
+    // 前後スライドへのナビゲーションを表示する場合
+    navigation: {
+      nextEl: '.swiper-button-next', // 次のスライドボタンのセレクタ
+      prevEl: '.swiper-button-prev', // 前のスライドボタンのセレクタ
+    }
+  });
+</script>
 </body>
 </html>

@@ -35,7 +35,7 @@
 /* SP view */
 @media screen and (max-width:812px) {
   .list-columnNavigation {
-    margin: 42px 0 18px
+    margin: 42px 0 18px;
   }
   .btn-columnNavigation {
     font-size: 13px

@@ -5,9 +5,11 @@
 @import "./../_template/ttl/ttl-pageHead";
 @import "./../_template/box-columnNavigation/box-columnNavigation";
 @import "./../_template/pagination/columnPageNation";
+@import "lib/swiper.css";
 
-box-content-works-detail {
-  min-width: 1200px
+.box-content-works-detail {
+  min-width: 1200px;
+  overflow: hidden;
 }
 
 @media screen and (max-width:812px) {
@@ -22,12 +24,24 @@ box-content-works-detail {
     background-size: cover;
 }
 
+/* ローカルナビ */
+/* SP view */
+@media screen and (max-width:812px) {
+  .list-columnNavigation {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .item-columnNavigation {
+	  margin: 0 30px 15px 0;
+	}
+}
 
 /* 記事本文 */
 /* PC view */
 .box-columnDetail {
   width: 900px;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .box-columnDetailMain>img {
@@ -69,6 +83,99 @@ box-content-works-detail {
     font-size: 13px
   }
 }
+
+/* スライダー */
+/* PC view */
+.swiper-container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 35px;
+    overflow: visible;
+    
+	&::before,
+	&::after {
+		content: "";
+	    display: block;
+	    width: calc((100vw - 900px) / 2);
+	    height: 100%;
+	    background-color: #fff;
+	    position: absolute;
+	    top: 0;
+	    z-index: 2;
+	}
+
+    &::before {
+	    left: calc(-1 * (100vw - 900px) / 2);
+	}
+    
+    &::after {
+	    right: calc(-1 * (100vw - 900px) / 2);
+	}
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	width: 25px;
+	height: 31px;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+}
+
+.swiper-button-prev {
+	background: url(/img/works/btn-left.png) 0 0 no-repeat;
+	background-size: 25px;
+	left: -45px;
+}
+
+.swiper-button-next {
+	background: url(/img/works/btn-right.png) 0 0 no-repeat;
+	background-size: 25px;
+	right: -45px;
+}
+
+@media screen and (max-width:1200px) {
+
+.swiper-container {
+
+	&::before,
+	&::after {
+	    width: 150px;
+	}
+
+    &::before {
+	    left: -150px;
+	}
+    
+    &::after {
+	    right: -150px;
+	}
+}
+
+}
+
+/* SP view */
+@media screen and (max-width:812px) {
+
+.swiper-container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+    overflow: hidden;
+    
+	&::before,
+	&::after {
+		display: none;
+	}
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	display: none;
+}
+
+}
+
 
 /* 施工事例詳細 */
 /* PC view */
