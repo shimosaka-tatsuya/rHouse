@@ -5,6 +5,12 @@
 @import "./../_template/ttl/ttl-pageHead";
 @import "./../_template/pagination/columnPageNation";
 
+/* メインビジュアル */
+.box-pageHead {
+	background: url(../img/news/bgMainVisual.jpg) top no-repeat;
+	background-size: cover;
+}
+
 .box-content-news-detail {
   min-width: 1200px
 }

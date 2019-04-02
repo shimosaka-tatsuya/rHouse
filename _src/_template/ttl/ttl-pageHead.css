@@ -4,8 +4,6 @@
   min-width: 980px;
   height: 350px;
   margin-bottom: 50px;
-  background: url(../img/news/bgMainVisual.jpg) top no-repeat;
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -7,6 +7,12 @@
 @import "./../_template/box-columnNavigation/box-columnNavigation";
 @import "./../_template/pagination/pagination";
 
+/* メインビジュアル */
+.box-pageHead {
+	background: url(../img/news/bgMainVisual.jpg) top no-repeat;
+	background-size: cover;
+}
+
 .box-content-news {
   min-width: 1200px
 }
