@@ -14,6 +14,18 @@
   }
 }
 
+.newLine {
+	display: none;
+}
+
+@media screen and (max-width:812px) {
+
+.newLine {
+	display: inline;
+}
+	
+}
+
 /* メインビジュアル */
 /* PC view */
 .box-pageHead {
@@ -21,12 +33,29 @@
     background-size: cover;
 }
 
+/* 見出し下のテキスト */
+/* PC view */
 .txt-concept {
 	font-size: 16px;
 	line-height: 2.6;
 	width: 958px;
 	margin: 36px auto 100px;
 	letter-spacing: .15em;
+	text-align: justify;
+}
+
+/* SP view */
+@media screen and (max-width:812px) {
+
+.txt-concept {
+	font-size: 14px;
+	width: 100%;
+	margin: 40px auto 80px;
+	padding: 0 20px;
+	line-height: 2;
+	box-sizing: border-box;
+}
+
 }
 
 /* 弊社の強み */
@@ -54,10 +83,12 @@
 	background-color: rgba(242, 242, 242, .9);
 	padding: 55px 0 45px;
 	width: 50%;
+	text-align: center;
 }
 
 .ttl-strengths {
-	text-align: center;
+	text-align: left;
+	display: inline-block;
 	font-size: 20px;
 	color: #0d955a;
 	letter-spacing: .12em;
@@ -108,4 +139,76 @@
 .item-strengths:nth-child(2n) .tmb-strength {
 	left: 0;
 	right: unset;
+}
+
+/* SP view */
+@media screen and (max-width:812px) {
+
+.list-strengths {
+	width: 100%;
+	min-width: unset;
+	max-width: unset;
+	margin: 40px auto 0;
+}
+
+.item-strengths {
+	margin-bottom: 35px;
+	position: relative;
+	padding: 40% 0 0;
+	display: block;
+}
+
+.data-strengths {
+	padding: 30px 15px 40px;
+	box-sizing: border-box;
+	width: calc(100% - 40px);
+	margin: 0 auto;
+}
+
+.ttl-strengths {
+	font-size: 15px;
+	line-height: 2;
+	margin-bottom: 15px;
+}
+
+.txt-strengths {
+	font-size: 12px;
+	padding: 0;
+	line-height: 1.9;
+}
+
+.box-strengthsInner {
+	text-align: center;
+	margin-top: 18px;
+}
+
+.btn-strengths {
+	line-height: 1;
+	color: #0d955a;
+	text-decoration: none;
+	transition-property: opacity;
+	transition-duration: .3s;
+	transition-timing-function: ease;
+	
+	&::after {
+		content: ">>";
+		display: inline-block;
+		margin-left: 5px;
+	}
+	
+	&:hover {
+		opacity: .5;
+	}
+}
+
+.tmb-strength {
+	right: unset;
+	width: 100%;
+}
+
+.item-strengths:nth-child(2n) .tmb-strength {
+	left: 0;
+	right: unset;
+}
+
 }
