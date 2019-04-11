@@ -1,0 +1,10 @@
+<ul class="list-faq">
+	<% dataFaq.forEach(function( data ) { %>
+	<li class="item-faq">
+		<dl class="data-faq">
+			<dt class="ttl-faq"><%- data.ttlFaq %></dt>
+			<dd class="txt-faq"><%- data.txtFaq %></dd>
+		</dl><!-- /.data-faq -->
+	</li><!-- /.item-faq -->
+	<% }); %>
+</ul><!-- /.list-faq -->
