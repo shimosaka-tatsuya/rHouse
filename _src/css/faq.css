@@ -19,6 +19,6 @@
 /* メインビジュアル */
 /* PC view */
 .box-pageHead {
-    background: url(../img/faq/bgMainVisual.jpg) top no-repeat;
+    background: url(/img/faq/bgMainVisual.jpg) top no-repeat;
     background-size: cover;
 }
