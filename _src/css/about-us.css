@@ -29,8 +29,18 @@
 /* メインビジュアル */
 /* PC view */
 .box-pageHead {
-    background: url(../img/about-us/bgMainVisual.jpg) top no-repeat;
+    background: url(/img/about-us/bgMainVisual.jpg) top no-repeat;
     background-size: cover;
+}
+
+/* SP view */
+@media screen and (max-width:812px) {
+
+.box-pageHead {
+	background: url(/img/about-us/bgMainVisualSp.jpg) top no-repeat;
+    background-size: cover;
+}
+
 }
 
 /* 見出し下のテキスト */
@@ -209,6 +219,215 @@
 .item-strengths:nth-child(2n) .tmb-strength {
 	left: 0;
 	right: unset;
+}
+
+}
+
+/* ロイヤルハウスについて */
+/* PC view */
+.box-aboutRoyalHouse {
+	width: 100%;
+	background: url(/img/about-us/bgAboutRoyalHouse.jpg) center top no-repeat;
+	background-size: cover;
+	padding: 100px 0;
+	color: #fff;
+}
+
+.box-aboutRoyalHouse .ttl-contentHead {
+	color: #fff;
+}
+
+.txt-aboutRoyalHouse {
+	width: 980px;
+	margin: 50px auto 50px;
+	font-size: 16px;
+	line-height: 2.3;
+	letter-spacing: .15em;
+	text-align: justify;
+}
+
+.box-aboutRoyalHouseInner {
+	width: 980px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.data-aboutRoyalHouse {
+	width: 458px;
+	letter-spacing: .12em;
+}
+
+.ttl-aboutRoyalHouseSub {
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 1;
+	margin-bottom: 38px;
+	position: relative;
+	
+	&::after {
+		content: "";
+		display: block;
+		height: 1px;
+		background-color: #fff;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+	}
+}
+
+.data-aboutRoyalHouse:nth-child(1) .ttl-aboutRoyalHouseSub {
+	&::after {
+		width: 336px;
+	}
+}
+
+.data-aboutRoyalHouse:nth-child(2) .ttl-aboutRoyalHouseSub {
+	&::after {
+		width: 270px;
+	}
+}
+
+.txt-aboutRoyalHouseSub {
+	line-height: 2.7;
+	font-size: 14px;
+	text-align: justify;
+}
+
+.box-aboutRoyalHouse .wp-transition {
+	justify-content: center;
+}
+
+.box-aboutRoyalHouse .btn-transition {
+	color: #fff;
+    border: 1px solid #fff;
+}
+
+/* SP view */
+@media screen and (max-width:812px) {
+
+.box-aboutRoyalHouse {
+	width: 100%;
+	padding: 60px 20px;
+	box-sizing: border-box;
+}
+
+.txt-aboutRoyalHouse {
+	width: 100%;
+	margin: 30px 0 28px;
+	font-size: 12px;
+}
+
+.box-aboutRoyalHouseInner {
+	width: 100%;
+	flex-flow: column;
+}
+
+.data-aboutRoyalHouse {
+	width: 100%;
+	margin-top: 36px;
+	padding: 0 15px;
+	box-sizing: border-box;
+}
+
+.data-aboutRoyalHouse:first-child {
+	margin-top: 0;
+}
+
+.ttl-aboutRoyalHouseSub {
+	font-size: 15px;
+	margin-bottom: 20px;
+}
+
+.data-aboutRoyalHouse:nth-child(1) .ttl-aboutRoyalHouseSub {
+	&::after {
+		width: calc( 100% - 94px);
+	}
+}
+
+.data-aboutRoyalHouse:nth-child(2) .ttl-aboutRoyalHouseSub {
+	&::after {
+		width: calc( 100% - 144px);
+	}
+}
+
+.txt-aboutRoyalHouseSub {
+	font-size: 11px;
+}
+
+.box-aboutRoyalHouse .btn-transition {
+    font-size: 13px;
+    letter-spacing: .08em;
+}
+	
+}
+
+/* 会社概要 */
+/* PC view */
+.box-companyProfile {
+	width: 700px;
+	margin: 0 auto;
+	padding: 100px 0 110px;
+}
+
+.ttl-companyProfile {
+	text-align: center;
+	font-size: 21px;
+	line-height: 1.4;
+	margin: 50px 0 34px;
+}
+
+.data-companyProfile {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	line-height: 2.4;
+	font-size: 16px;
+}
+
+.ttl-companyProfileSub {
+	width: 250px;
+	font-weight: bold;
+}
+
+.txt-companyProfile {
+	width: 450px;
+}
+
+.txt-companyProfileLink {
+	color: #0d955a;
+}
+
+/* SP view */
+@media screen and (max-width:812px) {
+
+.box-companyProfile {
+	width: 100%;
+	padding: 80px 20px 80px;
+	box-sizing: border-box;
+}
+
+.ttl-companyProfile {
+	font-size: 14px;
+	margin: 30px 0;
+}
+
+.data-companyProfile {
+	flex-wrap: nowrap;
+	flex-flow: column;
+	font-size: 12px;
+}
+
+.ttl-companyProfileSub {
+	width: 100%;
+	margin-bottom: -2px;
+}
+
+.txt-companyProfile {
+	width: 100%;
+	margin-bottom: 12px;
 }
 
 }
