@@ -1,0 +1,76 @@
+.list-faq {
+	width: 980px;
+	margin: 50px auto 0;
+}
+
+.data-faq {
+	margin-bottom: 65px;
+}
+
+.ttl-faq,
+.txt-faq {
+	font-size: 16px;
+	line-height: 1.6;
+	position: relative;
+	padding-left: 60px;
+	box-sizing: border-box;
+	letter-spacing: .15em;
+	
+	&::before {
+		display: block;
+		font-size: 40px;
+		width: 1em;
+		height: 1em;
+		position: absolute;
+		top: -22px;
+		left: 0;
+	}
+}
+
+
+.ttl-faq {
+	margin-bottom: 40px;
+	
+	&::before {
+		content: "Q";
+	}
+}
+.txt-faq {
+	color: #0d955a;
+	text-align: justify;
+	
+	&::before {
+		content: "A";
+	}
+}
+
+@media screen and (max-width:812px) {
+	
+.list-faq {
+	width: 100%;
+	margin: 45px auto 0;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+.data-faq {
+	margin-bottom: 52px;
+}
+
+.ttl-faq,
+.txt-faq {
+	font-size: 12px;
+	padding-left: 60px;
+	
+	&::before {
+		font-size: 30px;
+		top: -16px;
+	}
+}
+
+
+.ttl-faq {
+	margin-bottom: 22px;
+}
+
+}

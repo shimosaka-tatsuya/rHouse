@@ -1,0 +1,24 @@
+@import "./../_template/ttl/ttl-pageHead";
+@import "./../_template/ttl/ttl-contentHead";
+@import "./../_template/ttl/ttl-contentHead";
+@import "./../_template/list-faq/list-faq";
+@import "./../_template/btn/btn-transition";
+@import "./../_template/box-addToWorks/box-addToWorks";
+@import "./../_template/box-addToContact/box-addToContact";
+
+.box-content-faq {
+  min-width: 1200px
+}
+
+@media screen and (max-width:812px) {
+  .box-content-faq {
+    min-width: unset
+  }
+}
+
+/* メインビジュアル */
+/* PC view */
+.box-pageHead {
+    background: url(../img/faq/bgMainVisual.jpg) top no-repeat;
+    background-size: cover;
+}
