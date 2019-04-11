@@ -212,3 +212,90 @@
 }
 
 }
+
+/* ロイヤルハウスについて */
+/* PC view */
+.box-aboutRoyalHouse {
+	width: 100%;
+	background: url(/img/about-us/bgAboutRoyalHouse.jpg) center top no-repeat;
+	background-size: cover;
+	padding: 100px 0;
+	color: #fff;
+}
+
+.box-aboutRoyalHouse .ttl-contentHead {
+	color: #fff;
+}
+
+.txt-aboutRoyalHouse {
+	width: 980px;
+	margin: 50px auto 50px;
+	font-size: 16px;
+	line-height: 2.3;
+	letter-spacing: .15em;
+	text-align: justify;
+}
+
+.box-aboutRoyalHouseInner {
+	width: 980px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.data-aboutRoyalHouse {
+	width: 458px;
+	letter-spacing: .12em;
+}
+
+.ttl-aboutRoyalHouseSub {
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 1;
+	margin-bottom: 38px;
+	position: relative;
+	
+	&::after {
+		content: "";
+		display: block;
+		height: 1px;
+		background-color: #fff;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+	}
+}
+
+.data-aboutRoyalHouse:nth-child(1) .ttl-aboutRoyalHouseSub {
+	&::after {
+		width: 336px;
+	}
+}
+
+.data-aboutRoyalHouse:nth-child(2) .ttl-aboutRoyalHouseSub {
+	&::after {
+		width: 270px;
+	}
+}
+
+.txt-aboutRoyalHouseSub {
+	line-height: 2.7;
+	font-size: 14px;
+	text-align: justify;
+}
+
+.box-aboutRoyalHouse .wp-transition {
+	justify-content: center;
+}
+
+.box-aboutRoyalHouse .btn-transition {
+	color: #fff;
+    border: 1px solid #fff;
+}
+
+/* SP view */
+@media screen and (max-width:812px) {
+	
+}
