@@ -7,7 +7,7 @@
 
 /* メインビジュアル */
 .box-pageHead {
-	background: url(../img/news/bgMainVisual.jpg) top no-repeat;
+	background: url(/img/news/bgMainVisual.jpg) top no-repeat;
 	background-size: cover;
 }
 
